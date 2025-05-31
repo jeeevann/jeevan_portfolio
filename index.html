@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Bhandare - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Hi, I'm <span class="highlight">Jeevan Bhandare</span></h1>
+            <p class="typing-text">I'm a Web Developer</p>
+            <div class="social-links">
+                <a href="https://github.com/jeeevann" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jeevanbhandare/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/jeevan.bhandaree" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title" data-aos="fade-down">About Me</h2>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating beautiful, functional websites. I specialize in frontend development and enjoy bringing ideas to life in the browser.</p>
+                
+                <div class="education" data-aos="fade-up">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>Bachelor of Technology in Computer Engineering</h4>
+                        <p>St. John College of Engineering</p>
+                        <p>2024 - 2027 (Expected)</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Diploma in Computer Engineering</h4>
+                        <p>Government Polytechnic Miraj</p>
+                        <p>Completed in 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image" data-aos="fade-left">
+                <div class="profile-image">
+                    <img src="phto.jpeg" alt="Jeevan Bhandare" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title" data-aos="fade-down">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-aos="flip-left">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title" data-aos="fade-down">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="zoom-in">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h3>AI Detection Model</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="project-details">
+                    <div class="project-section">
+                        <h4><i class="fas fa-brain"></i> Overview</h4>
+                        <ul>
+                            <li>Developed an AI model to detect fake/manipulated images based on pixel-level analysis and deep learning</li>
+                            <li>Focused on detecting anomalies that indicate image tampering using neural network models</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-cogs"></i> Key Features</h4>
+                        <ul>
+                            <li>User Upload Interface: Users can upload any image through a simple UI</li>
+                            <li>One-Click Detection: A "Detect" button triggers the analysis process</li>
+                            <li>Result Output: Displays the likelihood of an image being fake as a percentage score</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-flask"></i> Technical Details</h4>
+                        <ul>
+                            <li>Pixel-Level Analysis: Utilized low-level pixel inconsistencies to catch subtle tampering</li>
+                            <li>Neural Networks Used:
+                                <ul>
+                                    <li>DNN (Deep Neural Network) for classification</li>
+                                    <li>NNN (Custom Neural Net) architecture optimized for detecting forgery-specific patterns</li>
+                                </ul>
+                            </li>
+                            <li>Trained on a dataset of real and fake images with labelled ground truths</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tools"></i> Tools & Technologies</h4>
+                        <ul>
+                            <li>Languages/Frameworks: Python, TensorFlow / PyTorch</li>
+                            <li>Model Deployment: Flask / Streamlit / FastAPI</li>
+                            <li>Frontend: HTML/CSS, JS</li>
+                            <li>Others: OpenCV for image processing, NumPy for numerical operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-line"></i> Results</h4>
+                        <ul>
+                            <li>Achieved high accuracy in distinguishing between real and fake images during testing</li>
+                            <li>Model outputs are interpretable and user-friendly, providing confidence percentages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h3>Weather Dashboard</h3>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="project-details">
+                    <p>A weather application that provides real-time weather information:</p>
+                    <ul>
+                        <li>Real-time weather data integration</li>
+                        <li>Dynamic weather updates</li>
+                        <li>Location-based weather information</li>
+                        <li>5-day weather forecast feature</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title" data-aos="fade-down">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>jeevanbhandare45@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>7666076748</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Mumbai, Maharashtra, India</p>
+                </div>
+            </div>
+            <form class="contact-form" data-aos="fade-left">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jeevan Bhandare. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
