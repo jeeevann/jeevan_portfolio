@@ -30,7 +30,7 @@
     <section id="home" class="hero">
         <div class="hero-content" data-aos="fade-up">
             <h1>Hi, I'm <span class="highlight">Jeevan Bhandare</span></h1>
-            <p class="typing-text">I'm a Web Developer</p>
+            <p class="typing-text">I'm a <span class="typed-text"></span></p>
             <div class="social-links">
                 <a href="https://github.com/jeeevann" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/jeevanbhandare/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
@@ -57,6 +57,20 @@
                         <h4>Diploma in Computer Engineering</h4>
                         <p>Government Polytechnic Miraj</p>
                         <p>Completed in 2024</p>
+                    </div>
+                </div>
+
+                <div class="experience" data-aos="fade-up">
+                    <h3>Professional Experience</h3>
+                    <div class="experience-item">
+                        <h4>Java Development Intern</h4>
+                        <p>IRCT, Sangli</p>
+                        <p>Currently Working</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Android App Development Intern</h4>
+                        <p>iGap Technologies, Kolhapur</p>
+                        <p>June 2023</p>
                     </div>
                 </div>
             </div>
@@ -91,6 +105,41 @@
                 <h3>JavaScript</h3>
                 <div class="progress-bar">
                     <div class="progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="500">
+                <i class="fas fa-robot"></i>
+                <h3>AI</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="600">
+                <i class="fas fa-code"></i>
+                <h3>C</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="700">
+                <i class="fas fa-code"></i>
+                <h3>C++</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
                 </div>
             </div>
         </div>
@@ -158,17 +207,87 @@
             </div>
             <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="project-header" onclick="toggleProject(this)">
-                    <h3>Weather Dashboard</h3>
+                    <h3>Classen: Parent Teacher Portal</h3>
                     <span class="expand-icon">+</span>
                 </div>
                 <div class="project-details">
-                    <p>A weather application that provides real-time weather information:</p>
-                    <ul>
-                        <li>Real-time weather data integration</li>
-                        <li>Dynamic weather updates</li>
-                        <li>Location-based weather information</li>
-                        <li>5-day weather forecast feature</li>
-                    </ul>
+                    <div class="project-section">
+                        <h4><i class="fas fa-thumbtack"></i> Overview</h4>
+                        <p>Developed a web-based portal designed to bridge communication between parents and teachers, enhancing student monitoring and engagement.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-check-circle"></i> Key Features</h4>
+                        <ul>
+                            <li>
+                                <strong>Role-based Access System:</strong>
+                                <ul>
+                                    <li>Separate login for Parents and Teachers with secure authentication</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Student Information Dashboard:</strong>
+                                <ul>
+                                    <li>Academic performance</li>
+                                    <li>Attendance records</li>
+                                    <li>Timetable or schedule</li>
+                                    <li>Personal details (e.g., class, section, roll number)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Notice Management:</strong>
+                                <ul>
+                                    <li>Teachers can create and upload notices directed to:
+                                        <ul>
+                                            <li>Individual students</li>
+                                            <li>Specific classes</li>
+                                            <li>All parents</li>
+                                        </ul>
+                                    </li>
+                                    <li>Parents can view all uploaded notices relevant to their child or general school updates</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>User-friendly Interface:</strong>
+                                <ul>
+                                    <li>Clean, intuitive UI to ensure accessibility for non-technical users</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Real-time Data Updates:</strong>
+                                <ul>
+                                    <li>Immediate reflection of newly uploaded notices and updates to student records</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-wrench"></i> Technology Stack</h4>
+                        <ul>
+                            <li>Frontend: HTML, CSS, JavaScript</li>
+                            <li>Backend: PHP</li>
+                            <li>Database: MySQL</li>
+                            <li>Authentication: Role-based login using JWT</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-rocket"></i> Highlights</h4>
+                        <ul>
+                            <li>Improved parent engagement by providing transparency in student academic life</li>
+                            <li>Simplified notice distribution process for teachers</li>
+                            <li>Scalable design allowing future integration of features like messaging, report cards, or homework tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                        <ul>
+                            <li>Reduced communication gaps between parents and teachers</li>
+                            <li>Increased parental involvement in student academic performance and school activities</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,7 +322,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Jeevan Bhandare. All rights reserved.</p>
+        <p>&copy; 2025 Jeevan Bhandare. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
