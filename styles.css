@@ -342,37 +342,36 @@ body {
 .project-details {
     max-height: 0;
     overflow: hidden;
-    padding: 0 1.5rem;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px;
 }
 
-.project-card.active .project-details {
-    max-height: 400px;
-    padding: 1.5rem;
-    opacity: 1;
-    overflow-y: auto;
+.project-details.active {
+    max-height: 400px; /* Fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    /* Customize scrollbar */
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) #2a2a2a;
+    scrollbar-color: #666 #333;
 }
 
-/* Custom scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+/* Webkit scrollbar styling */
 .project-details::-webkit-scrollbar {
     width: 8px;
 }
 
 .project-details::-webkit-scrollbar-track {
-    background: #2a2a2a;
+    background: #333;
     border-radius: 4px;
 }
 
 .project-details::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: #666;
     border-radius: 4px;
 }
 
 .project-details::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
+    background: #888;
 }
 
 .project-card.active .expand-icon {

@@ -108,9 +108,11 @@ function toggleProject(header) {
     
     if (details.style.maxHeight) {
         details.style.maxHeight = null;
+        details.classList.remove('active');
         icon.textContent = '+';
     } else {
         details.style.maxHeight = details.scrollHeight + "px";
+        details.classList.add('active');
         icon.textContent = '-';
     }
 } 
