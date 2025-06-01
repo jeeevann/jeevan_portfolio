@@ -6,33 +6,47 @@ AOS.init({
 });
 
 // Typing Animation
-const typingText = document.querySelector('.typing-text');
-const words = ['Web Developer', 'Frontend Developer', 'UI/UX Designer'];
-let wordIndex = 0;
+const typedTextSpan = document.querySelector(".typed-text");
+const texts = ["Web Developer", "Android App Developer"];
+let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+let typingDelay = 200;
+let erasingDelay = 100;
+let newTextDelay = 2000;
 
 function type() {
-    const currentWord = words[wordIndex];
-    const currentChar = currentWord.substring(0, charIndex);
-    typingText.textContent = `I'm a ${currentChar}`;
-
-    if (!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(type, 200);
-    } else if (isDeleting && charIndex > 0) {
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+        typedTextSpan.textContent = currentText.substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(type, 100);
+        typingDelay = erasingDelay;
     } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) {
-            wordIndex = (wordIndex + 1) % words.length;
-        }
-        setTimeout(type, 1000);
+        typedTextSpan.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typingDelay = 200;
     }
+
+    if (!isDeleting && charIndex === currentText.length) {
+        typingDelay = newTextDelay;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typingDelay = 500;
+    }
+
+    setTimeout(type, typingDelay);
 }
 
-type();
+// Start typing animation immediately
+if (typedTextSpan) type();
+
+// Additional initialization on window load
+window.addEventListener('load', () => {
+    AOS.init();
+});
 
 // Mobile Navigation
 const burger = document.querySelector('.burger');
@@ -89,16 +103,14 @@ contactForm.addEventListener('submit', (e) => {
 
 // Project Card Toggle
 function toggleProject(header) {
-    const projectCard = header.parentElement;
-    const wasActive = projectCard.classList.contains('active');
+    const details = header.nextElementSibling;
+    const icon = header.querySelector('.expand-icon');
     
-    // Close all project cards
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.classList.remove('active');
-    });
-    
-    // If the clicked card wasn't active before, open it
-    if (!wasActive) {
-        projectCard.classList.add('active');
+    if (details.style.maxHeight) {
+        details.style.maxHeight = null;
+        icon.textContent = '+';
+    } else {
+        details.style.maxHeight = details.scrollHeight + "px";
+        icon.textContent = '-';
     }
 } 
