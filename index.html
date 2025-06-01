@@ -62,15 +62,27 @@
 
                 <div class="experience" data-aos="fade-up">
                     <h3>Professional Experience</h3>
-                    <div class="experience-item">
-                        <h4>Java Development Intern</h4>
-                        <p>IRCT, Sangli</p>
-                        <p>Currently Working</p>
-                    </div>
-                    <div class="experience-item">
-                        <h4>Android App Development Intern</h4>
-                        <p>iGap Technologies, Kolhapur</p>
-                        <p>June 2023</p>
+                    <div class="experience-timeline">
+                        <div class="experience-item">
+                            <h4><i class="fas fa-laptop-code"></i>Java Development Intern</h4>
+                            <p class="company">IRCT, Sangli</p>
+                            <span class="duration">Currently Working</span>
+                            <ul>
+                                <li>Working on enterprise-level Java applications</li>
+                                <li>Developing robust backend solutions</li>
+                                <li>Collaborating with senior developers on critical projects</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h4><i class="fas fa-mobile-alt"></i>Android App Development Intern</h4>
+                            <p class="company">iGap Technologies, Kolhapur</p>
+                            <span class="duration">June 2023</span>
+                            <ul>
+                                <li>Developed and maintained Android applications</li>
+                                <li>Implemented user-friendly mobile interfaces</li>
+                                <li>Worked with REST APIs and data integration</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,11 +323,12 @@
                     <p>Mumbai, Maharashtra, India</p>
                 </div>
             </div>
-            <form class="contact-form" data-aos="fade-left">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
+            <form class="contact-form" id="contactForm">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
+                <div id="formMessage" class="form-message"></div>
             </form>
         </div>
     </section>
